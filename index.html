@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta-Te-Ti TensorFlow.js 🌸</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffffff 100%); 
+            height: 100vh; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        h1 { color: #d63384; text-shadow: 1px 1px 2px rgba(255,255,255,0.8); }
+
+        #board { 
+            display: grid; grid-template-columns: repeat(3, 100px); gap: 10px; 
+            background: rgba(255, 255, 255, 0.4);
+            padding: 15px; border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+        .cell { 
+            width: 100px; height: 100px; 
+            background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(240,240,240,0.6)); 
+            font-size: 4em; display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; border-radius: 10px; color: #ff66a3;
+            box-shadow: inset 0 2px 5px rgba(255,255,255,1), 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+        .cell:hover { transform: scale(1.05); }
+        #status { margin-top: 20px; font-size: 1.2em; font-weight: bold; color: #c2185b; }
+    </style>
+</head>
+<body>
+    <h1>Ta-Te-Ti vs IA 🌸</h1>
+    <div id="board"></div>
+    <div id="status">Esperando a WebGL... (´｡• ω •｡`)</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
